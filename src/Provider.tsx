@@ -6,9 +6,12 @@ import {
   useContext,
 } from 'react'
 
-const RatingContext = createContext({
+const RatingContext = createContext<{
+  rating: any
+  setRating: (value: number) => void
+}>({
   rating: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
-  setRating: (value: number) => {},
+  setRating: () => {},
 })
 
 const Provider = ({ children }: { children: ReactNode }) => {

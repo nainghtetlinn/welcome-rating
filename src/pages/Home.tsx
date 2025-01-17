@@ -10,27 +10,27 @@ import { useNavigate } from 'react-router-dom'
 const btns = [
   {
     img: AngryFace,
-    title: 'AngryFace',
+    title: 'Worst',
     value: 1,
   },
   {
     img: SadFace,
-    title: 'SadFace',
+    title: 'Bad',
     value: 2,
   },
   {
     img: PokerFace,
-    title: 'PokerFace',
+    title: 'Normal',
     value: 3,
   },
   {
     img: SmileFace,
-    title: 'SmileFace',
+    title: 'Good',
     value: 4,
   },
   {
     img: HappyFace,
-    title: 'HappyFace',
+    title: 'Excellent',
     value: 5,
   },
 ]
@@ -47,19 +47,25 @@ const Home = () => {
         </h1>
         <div className='flex items-center gap-2'>
           {btns.map(btn => (
-            <button
+            <div
               key={btn.value}
-              onClick={() => {
-                setRating(btn.value)
-                navigate('/result')
-              }}
+              className='flex flex-col items-center'
             >
-              <img
-                src={btn.img}
-                alt={btn.title}
-                className='w-20 h-20 object-cover'
-              />
-            </button>
+              <button
+                onClick={() => {
+                  setRating(btn.value)
+                  navigate('/result')
+                }}
+                className='hover:scale-110'
+              >
+                <img
+                  src={btn.img}
+                  alt={btn.title}
+                  className='w-20 h-20 object-cover'
+                />
+              </button>
+              <h5 className='text-sm font-bold'>{btn.title}</h5>
+            </div>
           ))}
         </div>
       </div>

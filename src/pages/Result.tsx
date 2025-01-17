@@ -15,8 +15,8 @@ const Result = () => {
   const navigate = useNavigate()
   return (
     <main className='h-screen flex items-center justify-center'>
-      <Card className='flex flex-col w-[300px]'>
-        <CardHeader className='items-center pb-0'>
+      <Card className='flex flex-col w-[350px]'>
+        <CardHeader className='items-center'>
           <CardTitle>Result</CardTitle>
           <CardDescription>2024-2025</CardDescription>
         </CardHeader>

@@ -16,13 +16,15 @@ const RatingContext = createContext<{
 
 const Provider = ({ children }: { children: ReactNode }) => {
   const [rating, setRating] = useState<any>(
-    JSON.parse(localStorage.getItem('rating') ?? '') || {
-      1: 0,
-      2: 0,
-      3: 0,
-      4: 0,
-      5: 0,
-    }
+    localStorage.getItem('rating')
+      ? JSON.parse(localStorage.getItem('rating')!)
+      : {
+          1: 0,
+          2: 0,
+          3: 0,
+          4: 0,
+          5: 0,
+        }
   )
 
   const handleClick = (value: number) => {

@@ -30,7 +30,7 @@ export default function Chart() {
       { title: 'normal', value: rating[3], fill: 'hsl(var(--chart-3))' },
       { title: 'bad', value: rating[2], fill: 'hsl(var(--chart-2))' },
       { title: 'worst', value: rating[1], fill: 'hsl(var(--chart-1))' },
-    ]
+    ].filter(i => i.value > 0)
   }, [rating])
 
   return (

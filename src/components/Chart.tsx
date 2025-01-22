@@ -13,11 +13,11 @@ import { useRating } from '../Provider'
 import { useMemo } from 'react'
 
 const chartConfig = {
-  excellent: { label: 'Excellent' },
-  good: { label: 'Good' },
-  normal: { label: 'Normal' },
-  bad: { label: 'Bad' },
-  worst: { label: 'Worst' },
+  excellent: { label: 'အကောင်းဆုံး' },
+  good: { label: 'ကောင်း' },
+  normal: { label: 'သင့်' },
+  bad: { label: 'ဆိုး' },
+  worst: { label: 'အဆိုးဆုံး' },
 } satisfies ChartConfig
 
 export default function Chart() {
@@ -48,7 +48,7 @@ export default function Chart() {
         <ChartTooltip content={<ChartTooltipContent />} />
         <ChartLegend
           content={<ChartLegendContent nameKey='title' />}
-          className='-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center'
+          className='-translate-y-2 flex-wrap gap-1 [&>*]:basis-1/4 [&>*]:justify-center'
         />
       </PieChart>
     </ChartContainer>

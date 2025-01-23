@@ -13,7 +13,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import Chart from '../components/Chart'
 
 import { useRating } from '../Provider'

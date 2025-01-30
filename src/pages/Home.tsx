@@ -74,14 +74,24 @@ const Home = () => {
           />
         </div>
       </header>
-      <main className='flex-1 grid grid-cols-3'>
-        <section className='w-full h-full p-4'>
-          <img
-            src={TuTgi}
-            alt='TU Taunggyi'
-            className='w-full h-full object-cover'
-          />
+      <main className='flex-1 gap-2 grid grid-cols-1 lg:grid-cols-3'>
+        <section className='flex items-center justify-center'>
+          <Card className='flex flex-col w-full max-w-[400px]'>
+            <CardHeader className='items-center'>
+              <CardTitle>Result</CardTitle>
+              <CardDescription>2024-2025</CardDescription>
+            </CardHeader>
+            <CardContent className='flex-1 pb-0'>
+              <Chart />
+            </CardContent>
+            <CardFooter className='flex-col items-start gap-2 text-sm'>
+              <div className='flex gap-2 font-medium leading-none'>
+                စုစုပေါင်း {total} ယောက်က မဲပေးခဲ့ပါသည်။
+              </div>
+            </CardFooter>
+          </Card>
         </section>
+
         <section className='flex items-center justify-center'>
           <div>
             <h1 className='text-center font-bold text-3xl mb-8 text-primary'>
@@ -111,21 +121,13 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className='flex items-center justify-center'>
-          <Card className='flex flex-col w-full max-w-[400px]'>
-            <CardHeader className='items-center'>
-              <CardTitle>Result</CardTitle>
-              <CardDescription>2024-2025</CardDescription>
-            </CardHeader>
-            <CardContent className='flex-1 pb-0'>
-              <Chart />
-            </CardContent>
-            <CardFooter className='flex-col items-start gap-2 text-sm'>
-              <div className='flex gap-2 font-medium leading-none'>
-                စုစုပေါင်း {total} ယောက်က မဲပေးခဲ့ပါသည်။
-              </div>
-            </CardFooter>
-          </Card>
+
+        <section className='w-full h-full p-4'>
+          <img
+            src={TuTgi}
+            alt='TU Taunggyi'
+            className='w-full h-full object-cover'
+          />
         </section>
       </main>
     </div>

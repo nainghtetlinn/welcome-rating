@@ -62,8 +62,8 @@ const Home = () => {
         </div>
         <div className='flex-1 flex justify-center'>
           <h4 className='font-bold text-xl'>
-            ၂၀၂၄-၂၀၂၅ ပညာသင်နှစ် မောင်မယ်သစ်လွင်ကြိုဆိုပွဲ နှင့်
-            ရှမ်းပြည်နယ်နေ့အကြို Project ပြပွဲ
+            ၂၀၂၅ ခုနှစ်၊ (၇၈)နှစ်မြောက်ရှမ်းပြည်နယ်နေ့အခမ်းအနား နှင့် Project
+            ပြပွဲ
           </h4>
         </div>
         <div className='w-20 h-20 overflow-hidden'>
@@ -104,7 +104,10 @@ const Home = () => {
                   className='flex flex-col items-center'
                 >
                   <button
-                    onClick={() => {
+                    // onClick={() => {
+                    //   setRating(btn.value)
+                    // }}
+                    onPointerDown={() => {
                       setRating(btn.value)
                     }}
                     className='hover:scale-125 duration-500'
